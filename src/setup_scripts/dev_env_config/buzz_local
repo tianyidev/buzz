@@ -1,12 +1,12 @@
 <VirtualHost *:80>
 	ServerAdmin webmaster@localhost
 
-	DocumentRoot /home/tianyi/buzz_project/buzz/src/web_role/
+	DocumentRoot /var/www/buzz_local_env/
 	<Directory />
 		Options FollowSymLinks
 		AllowOverride None
 	</Directory>
-	<Directory /home/tianyi/buzz_project/buzz/src/web_role/>
+	<Directory /var/www/buzz_local_env/>
 		Options Indexes FollowSymLinks MultiViews
 		AllowOverride None
 		Order allow,deny
