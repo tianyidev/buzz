@@ -1,8 +1,9 @@
 #!/bin/bash
 
+sudo service apache2 stop
 # clean up website directory
 if [ -d "/var/www/buzz_local_env" ]; then
-	rm -rf /var/www/buzz_local_env
+	sudo rm -rf /var/www/buzz_local_env
 fi
 
 # create website directory
@@ -15,5 +16,6 @@ sudo cp -f ./dev_env_config/buzz_local /etc/apache2/sites-available/
 sudo cp -f ./dev_env_config/httpd.conf /etc/apache2/
 
 # enable web service
+sudo service apache2 start
 sudo a2ensite buzz_local
 sudo service apache2 reload
